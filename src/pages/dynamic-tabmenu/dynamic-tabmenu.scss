@@ -1,0 +1,22 @@
+page-dynamic-tabmenu {
+    .tabmenu{
+        top:-20px;
+        bottom:0px;
+        width:100%;
+        height:60px;
+        overflow-y: auto;
+        display: flex;
+        justify-content: flex-start;
+        border-bottom:1px #eee solid;
+        .tabmenu-items{
+            button{
+                display: inline-block;
+                width:100px;
+                color:#bbb;
+            }
+            .active{
+                color:#666;
+            }
+        }
+    }
+}

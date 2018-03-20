@@ -1,0 +1,35 @@
+page-tab-menu {
+    .scroll-content {
+        overflow-y: hidden;
+    }
+    .tabmenu{
+        width:100%;
+        height:55px;
+        overflow-y: auto;
+        display: flex;
+        justify-content: space-between;
+        border-bottom:1px #eee solid;
+        background-color: #fff;
+        .tabmenu-items{
+            button{
+                display: inline-block;
+                width:100px;
+                color:#eee;
+            }
+            .active{
+                color:#666;
+            }
+        }
+    }
+    ion-slide{
+        padding-top:55px;
+    }
+
+    .slide-zoom {
+        height: 100%;
+        overflow-y: auto;
+    }
+    .tabmenu::-webkit-scrollbar {
+        display: none;
+    }
+}

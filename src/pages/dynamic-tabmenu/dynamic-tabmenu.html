@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar class="bar-positive" align-title="center">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <div class="tabmenu" #tabmenu ion-fixed>
+        <div class="tabmenu-items" *ngFor="let segment of segments;let idx = index;">
+          <div class="tabmenu-bt">
+            <button [ngClass]="{'active':idx==activeIndex}" ion-button clear icon-right>
+              <span (click)="change(idx)">
+              {{segment.name}}
+              </span>
+              <span (click)="close(idx)">
+                <ion-icon name="close"></ion-icon>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <button ion-item (click)="addSegment()">セグメントを追加</button>
+    <button *ngFor="let item of items" ion-item>{{item}}</button>
+  </ion-list>
+</ion-content>

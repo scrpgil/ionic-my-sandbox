@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>elastic-textarea</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ng-container *ngIf="loaded">
+    <div class="title">ion-textarea</div>
+    <ion-textarea elastic [(ngModel)]="text"></ion-textarea>
+    <div class="title">textarea</div>
+    <textarea elastic [(ngModel)]="text2"></textarea>
+  </ng-container>
+</ion-content>

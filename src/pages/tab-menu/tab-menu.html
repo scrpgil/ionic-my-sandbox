@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>TabMenu</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- START:タブメニュー-->
+  <div class="tabmenu" #tabmenu ion-fixed>
+    <div class="tabmenu-items" *ngFor="let segment of segments;let idx = index;">
+      <div class="tabmenu-bt">
+        <button [ngClass]="{'active':idx==activeIndex}" ion-button (click)="change(idx)" clear>{{segment.name}}</button>
+      </div>
+    </div>
+  </div>
+  <!-- END:タブメニュー-->
+  <!-- START:リスト-->
+  <ion-slides (ionSlideWillChange)="onSlideChangeStart()" class="tabmenu-slides" #Slides>
+    <ion-slide *ngFor="let segment of segments">
+      <ion-list>
+        <button *ngFor="let item of segment.items" ion-item>{{item}}</button>
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
+  <!-- END:リスト-->
+</ion-content>

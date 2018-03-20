@@ -1,0 +1,24 @@
+zoom-area {
+    .scroll-content {
+        overflow: hidden !important;
+        touch-action: none !important;
+    }
+
+    .zoom {
+        width: 100% !important;
+        height: 100% !important;
+        touch-action: none !important;
+        position: fixed;
+
+        .fit {
+            touch-action: none !important;
+        }
+    }
+
+    .btn-zoom {
+        width: 35px;
+        height: 35px !important;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
