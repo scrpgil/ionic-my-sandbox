@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MenuController,Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { FirebaseMessagingProvider } from '../providers/firebase-messaging/firebase-messaging';
+//import { FirebaseMessagingProvider } from '../providers/firebase-messaging/firebase-messaging';
 
 
 export interface Menu {
@@ -48,8 +48,12 @@ export class MyApp {
             pageName: 'elastic-textarea2',
             label: 'elastic-textarea2',
         },
+        {
+            pageName: 'qrcode',
+            label: 'QRCode',
+        },
     ];
-    constructor(fcm:FirebaseMessagingProvider, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menu:MenuController) {
+    constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menu:MenuController) {
         platform.ready().then(() => {
             statusBar.styleDefault();
             splashScreen.hide();

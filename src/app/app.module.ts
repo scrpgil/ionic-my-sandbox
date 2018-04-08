@@ -14,17 +14,18 @@ import { DynamicTabmenuPageModule} from '../pages/dynamic-tabmenu/dynamic-tabmen
 import { ElasticTextareaPageModule} from '../pages/elastic-textarea/elastic-textarea.module';
 import { ElasticTextarea2PageModule} from '../pages/elastic-textarea2/elastic-textarea2.module';
 import { TabMenuPageModule } from '../pages/tab-menu/tab-menu.module';
+import { QrcodePageModule} from '../pages/qrcode/qrcode.module';
 
 import {DirectivesModule} from "../directives/directives.module";
 import {ComponentsModule} from "../components/components.module";
 import { MockProvider } from '../providers/mock/mock';
 
-import { AngularFireModule } from 'angularfire2';
-import 'firebase/messaging'; // only import firebase messaging or as needed;
-import { firebaseConfig } from '../firebaseConfig';
-import { FirebaseMessagingProvider } from '../providers/firebase-messaging/firebase-messaging';
-import { AngularFireDatabaseModule } from "angularfire2/database-deprecated"
-import { AngularFireDatabase } from 'angularfire2/database';
+//import { AngularFireModule } from 'angularfire2';
+//import 'firebase/messaging'; // only import firebase messaging or as needed;
+//import { firebaseConfig } from '../firebaseConfig';
+//import { FirebaseMessagingProvider } from '../providers/firebase-messaging/firebase-messaging';
+//import { AngularFireDatabaseModule } from "angularfire2/database-deprecated"
+//import { AngularFireDatabase } from 'angularfire2/database';
 import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
@@ -42,10 +43,11 @@ import { IonicStorageModule } from '@ionic/storage';
         ElasticTextareaPageModule,
         ElasticTextarea2PageModule,
         TabMenuPageModule,
+        QrcodePageModule,
         DirectivesModule,
         ComponentsModule,
-        AngularFireDatabaseModule,
-        AngularFireModule.initializeApp(firebaseConfig),
+        //AngularFireDatabaseModule,
+        //AngularFireModule.initializeApp(firebaseConfig),
         IonicModule.forRoot(MyApp),
         IonicStorageModule.forRoot()
     ],
@@ -56,8 +58,8 @@ import { IonicStorageModule } from '@ionic/storage';
     providers: [
         StatusBar,
         SplashScreen,
-        FirebaseMessagingProvider,
-        AngularFireDatabase ,
+        //FirebaseMessagingProvider,
+        //AngularFireDatabase ,
         {provide: ErrorHandler, useClass: IonicErrorHandler},
     MockProvider
     ]

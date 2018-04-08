@@ -1,0 +1,15 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>QRCode</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <video #camera class="transparent-zone" autoplay="1"  id="video"></video>
+  <canvas #canvas id="canvas" ></canvas>
+  <p>{{scannedText}}</p>
+  <button ion-button (click)="showCamera()">{{!showing ? 'Show Camera': 'Hide Camera'}}</button>
+</ion-content>

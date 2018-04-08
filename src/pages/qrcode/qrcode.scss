@@ -1,0 +1,22 @@
+page-qrcode {
+    .transparent-zone {
+        width: 100%;
+        min-height: 200px;
+        background-color: transparent !important;
+    }
+    p {
+        background-color: white;
+    }
+    video{
+        width:100%;
+        height:auto;
+    }
+    canvas{
+        display: none;
+    }
+}
+
+.qrscan-transparent {
+    background-color: transparent !important;
+}
+
